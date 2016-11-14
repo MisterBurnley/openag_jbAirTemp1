@@ -1,6 +1,6 @@
 # openag_jbt1
 211-2936 Farnell 135-104LAG-J01, NTC, Axial, 100K. Analog thermistor 
-temperature sensor driver for OpenagInItiative Food Bot.
+temperature sensor driver for The V2 OpenagInItiative Food Bot.
 
 The jbt1 simple home made thermistor temperature sensor requires two components.
 A 120kohm resistor connected to the afore mentioned thermistor in series between
