@@ -1,10 +1,10 @@
 {
-    "name": "openag_jbt1",
+    "name": "openag_jbAirTemp1",
     "keywords": "openag, jbt1",
     "description": "OpenAg driver for the jbt1 analog thermister temperature sensor",
     "repository": {
         "type": "git",
-        "url": "https://github.com/MisterBurnley/openag_jbt1.git"
+        "url": "https://github.com/MisterBurnley/openag_jbAirTemp1.git"
     },
     "frameworks": "arduino",
     "platforms": "*",
