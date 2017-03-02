@@ -9,6 +9,7 @@
 Jbt1::Jbt1(int pin) {
   _pin = pin;
   status_level = OK;
+  status_code = CODE_OK;
   status_msg = "";
 }
 
@@ -32,7 +33,12 @@ bool Jbt1::get_air_temperature(std_msgs::Float32 &msg) {
   return res;
 }
 
-float Jbt1::getData(void) {
+void Jbt1::getData(void) {
+  if (status_level != OK) {
+    status_level = OK;
+    status_code = CODE_OK;
+    status_msg = "";
+  }
 
   valC = analogRead(_pin);      
   Temp = log(10000.0*((1024.0/valC-1))); 
@@ -41,7 +47,13 @@ float Jbt1::getData(void) {
     _send_air_temperature = true;
     _air_temperature = Temp;
    return _air_temperature;
-  delay(1000);
+  delay(2);
+  
+  else{
+    status_level = ERROR;
+    status_code = CODE_FAILED_TO_READ;
+    status_msg = "Failed to read from sensor";
+  }
 
 }
 
