@@ -52,6 +52,9 @@ class Jbt1 : public Module {
     bool _send_air_temperature;
     uint32_t _time_of_last_reading;
     const uint32_t _min_update_interval = 2500;
+ 
+  //staus codes
+ static const uint8_t CODE_FAILED_TO_READ = 1;
 
 };
 
